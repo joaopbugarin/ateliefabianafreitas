@@ -232,10 +232,6 @@ p {
   width: 250px; /* Both logos get smaller */
 }
 
-.nav-links {
-  display: flex;
-  gap: 2rem; /* Space between links */
-}
 
 .nav-link {
   color: var(--beige-light);
@@ -243,6 +239,10 @@ p {
   font-family: var(--font-secondary);
   font-weight: 500;
   transition: color 0.3s ease;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
 }
 
 .nav-link:hover {
@@ -275,7 +275,7 @@ p {
   z-index: 1;
   width: 100%;
   background-color: rgba(var(--off-white-rgb), 0.45);
-  min-height: 63vh; /* Increased height */
+  min-height: 65vh; /* Increased height */
   position: relative;
 }
 
@@ -553,16 +553,16 @@ section h2 {
   font-family: var(--font-accent);
   font-size: 4rem;
   color: var(--orange);
-  text-align: center;
+  text-align: left;
   margin-bottom: 1rem;
 }
 
 .gallery-subtitle {
-  font-family: var(--font-primary);
-  font-size: 1.5rem;
-  color: var(--dark);
-  margin-bottom: 4rem;
-  font-style: italic;
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--dark);
+    margin-bottom: 3rem;
 }
 
 /* Swiper styles */
@@ -640,8 +640,9 @@ section h2 {
   font-family: var(--font-accent);
   font-size: 3rem;
   color: var(--orange);
-  text-align: center;
+  text-align: right;
   margin-bottom: 1rem;
+font-weight: 450;
 }
 
 .map-container {
@@ -721,21 +722,60 @@ section h2 {
   }
 }
 
-.community-section {
-  background-color: var(--beige);
+.contact-section {
+  background-color: var(--teal);
 }
 
-.cta-section {
-  background-color: var(--off-white);
+.contact-section h2{
+    color: var(--off-white);
+    font-family: var(--font-accent);
+    font-size: 4rem;
 }
 
-/* Keep your existing footer styles */
+
+/* Footer styles */
 .footer {
-  background-color: var(--dark);
-  color: var(--off-white);
-  padding: 2rem 0;
-  margin-top: auto;
-}
+    background-color: var(--dark);
+    color: var(--off-white);
+    padding: 1.5rem 0;
+    margin-top: auto;
+    }
+    
+    .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    font-family: var(--font-secondary);
+    }
+    
+    .copyright {
+    opacity: 0.8;
+    }
+    
+    .developer-credits {
+    opacity: 0.8;
+    }
+    
+    .developer-credits a {
+    color: var(--beige-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    }
+    
+    .developer-credits a:hover {
+    color: var(--orange);
+    }
+    
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    }
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -836,4 +876,141 @@ section h2 {
     height: 200px;
     opacity: 0.05;
   }
+}
+
+/* LinkTree Styles */
+.linktree-container {
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: var(--teal);
+    }
+    
+    .linktree-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    }
+    
+    .linktree-link {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    background-color: var(--off-white);
+    border: 2px solid var(--olive);
+    color: var(--olive);
+    text-decoration: none;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 8px 8px 0 var(--beige-light);
+    }
+    
+    .linktree-link:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px 0 var(--beige-light);
+    background-color: var(--olive);
+    color: var(--off-white);
+    }
+    
+    .linktree-link i {
+    margin-right: 10px;
+    font-size: 1.2em;
+    }
+    
+    /* Specific styles for the standalone page */
+    .linktree-page {
+    min-height: 100vh;
+    background-color: var(--teal);
+    padding: 2rem 1rem;
+    }
+    
+    .linktree-page .profile {
+    text-align: center;
+    margin-bottom: 3rem;
+    }
+    
+    .linktree-page .profile img {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 0rem;
+    }
+    
+    .linktree-page .profile h1 {
+    font-family: var(--font-accent);
+    font-size: 2.5rem;
+    color: var(--olive);
+    margin-bottom: 0.5rem;
+    }
+    
+    .linktree-page .profile p {
+    color: var(--dark);
+    font-family: var(--font-secondary);
+    }
+
+
+    /* Profile section with different background */
+.profile-section {
+margin-bottom: 2rem;
+}
+
+/* Update profile styles */
+.linktree-page .profile {
+text-align: center;
+margin-bottom: 0;
+}
+
+.linktree-page .profile img {
+width: 300px;
+height: 200px;
+margin-bottom: 0;
+object-fit: contain;
+}
+
+/* Footer styles for linktree page */
+.linktree-footer {
+margin-top: 2rem;
+padding: 1rem 0;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.linktree-footer .footer-content {
+max-width: 680px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 2rem;
+}
+
+.linktree-footer p {
+color: var(--beige-light);
+font-size: 0.8rem;
+opacity: 0.8;
+}
+
+.linktree-footer a {
+color: var(--beige-light);
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.linktree-footer a:hover {
+color: var(--orange);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+.linktree-footer .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.linktree-page .profile img {
+    width: 250px;
+    height: 160px;
+}
 }
