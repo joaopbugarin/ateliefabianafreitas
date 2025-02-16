@@ -1,6 +1,6 @@
 # ateliefabianafreitas
 TO DO
-[ ]template
-[ ]colour scheme
+[x]template
+[x]colour scheme
 [ ]catalogue strategy
 [ ]linktree alternative

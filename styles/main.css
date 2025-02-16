@@ -1,0 +1,341 @@
+/* Dolly Pro */
+@font-face {
+font-family: 'DollyPro';
+src: url('./fonts/DollyPro/Dolly Pro Regular.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'DollyPro';
+src: url('./fonts/DollyPro/Dolly Pro Bold.otf') format('opentype');
+font-weight: bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'DollyPro';
+src: url('./fonts/DollyPro/Dolly Pro Regular it.otf') format('opentype');
+font-weight: normal;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'DollyPro';
+src: url('./fonts/DollyPro/Dolly Pro Regular SmCp.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+font-feature-settings: "smcp";
+}
+
+/* Filmotype LaCrosse */
+@font-face {
+font-family: 'FilmotypeLaCrosse';
+src: url('./fonts/FilmotypeLacrosse/Filmotype Lacrosse.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+/* Runda */
+@font-face {
+font-family: 'Runda';
+src: url('./fonts/Runda/Runda Normal.otf') format('opentype');
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Runda';
+src: url('./fonts/Runda/Runda Normal Italic.otf') format('opentype');
+font-weight: 400;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'Runda';
+src: url('./fonts/Runda/Runda Light.otf') format('opentype');
+font-weight: 300;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Runda';
+src: url('./fonts/Runda/Runda Light Italic.otf') format('opentype');
+font-weight: 300;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'Runda';
+src: url('./fonts/Runda/Runda Medium.otf') format('opentype');
+font-weight: 500;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Runda';
+src: url('./fonts/Runda/Runda Medium Italic.otf') format('opentype');
+font-weight: 500;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'Runda';
+src: url('./fonts/Runda/Runda Bold.otf') format('opentype');
+font-weight: 700;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Runda';
+src: url('./fonts/Runda/Runda Bold Italic.otf') format('opentype');
+font-weight: 700;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'Runda';
+src: url('./fonts/Runda/Runda Black.otf') format('opentype');
+font-weight: 900;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Runda';
+src: url('./fonts/Runda/Runda Black Italic.otf') format('opentype');
+font-weight: 900;
+font-style: italic;
+}
+
+:root {
+/* Your existing color variables */
+--gray: #b9b8b3;
+--beige-light: #eadead;
+--dark: #362331;
+--off-white: #f8f6eb;
+--beige: #edead7;
+--orange: #c1592d;
+--teal: #16505b;
+--olive: #616824;
+
+/* Add font variables */
+--font-primary: 'DollyPro', serif;
+--font-secondary: 'Runda', sans-serif;
+--font-accent: 'FilmotypeLaCrosse', cursive;
+}
+
+/* Your existing reset styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Your existing body styles */
+body {
+background-color: var(--off-white);
+color: var(--dark);
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+font-family: var(--font-secondary);
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+/* Header */
+.header {
+background-color: var(--olive);
+padding: 1rem 0;
+position: fixed;
+width: 100%;
+z-index: 1000;
+transition: all 0.6s ease;
+}
+
+.nav-container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0.5rem 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* Scrolled state */
+.header-scrolled {
+background-color: var(--beige-light);
+padding: 0.5rem 0;
+}
+
+.header-scrolled .logo-default {
+opacity: 0;
+}
+
+.header-scrolled .logo-scroll {
+opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.logo-image {
+    width: 200px; /* Smaller on mobile */
+}
+}
+
+/* Add styles for logo and links */
+.logo {
+position: relative;
+display: flex;
+align-items: center;
+}
+
+.logo-image {
+width: 300px;
+height: auto;
+transition: all 0.6s ease;
+}
+
+/* Initially hide the scroll logo */
+.logo-scroll {
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+}
+
+.logo-default {
+opacity: 1;
+}
+
+.header-scrolled .logo-image {
+width: 250px; /* Both logos get smaller */
+}
+
+.nav-links {
+display: flex;
+gap: 2rem; /* Space between links */
+}
+
+.nav-link {
+color: var(--beige-light);
+text-decoration: none;
+font-family: var(--font-secondary);
+font-weight: 500;
+transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+color: var(--dark);
+}
+
+.header-scrolled .nav-link{
+color: var(--olive);
+}
+
+.header-scrolled .nav-link:hover {
+color: var(--dark);
+}
+
+/* Update hero section */
+.hero-section {
+min-height: 100vh;
+display: flex;
+align-items: center;
+padding-top: 80px;
+position: relative;
+overflow: hidden;
+}
+
+/* Add these new hero styles */
+.hero-content {
+position: relative;
+z-index: 1;
+}
+
+.hero-content h1 {
+font-family: var(--font-primary);
+font-size: 3.5rem;
+margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+font-family: var(--font-secondary);
+font-size: 1.25rem;
+margin-bottom: 2rem;
+color: var(--teal);
+}
+
+/* Pattern styles*/
+.section-with-pattern {
+position: relative;
+overflow: hidden;
+}
+
+.section-with-pattern::before {
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+width: 200px;
+height: 200px;
+background-image: url('./images/folha-1.png');
+opacity: 0.1;
+pointer-events: none;
+background-repeat: no-repeat;
+}
+
+/* Keep your existing section styles */
+section {
+padding: 5rem 0;
+}
+
+.about-section {
+background-color: var(--beige-light);
+}
+
+.gallery-section {
+background-color: var(--off-white);
+}
+
+.community-section {
+background-color: var(--beige);
+}
+
+.cta-section {
+background-color: var(--off-white);
+}
+
+/* Keep your existing footer styles */
+.footer {
+background-color: var(--dark);
+color: var(--off-white);
+padding: 2rem 0;
+margin-top: auto;
+}
+
+/* Keep your existing responsive styles */
+@media (max-width: 768px) {
+.nav-container {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+}
+
+.section-with-pattern::before {
+    width: 150px;
+    height: 150px;
+}
+}
+
