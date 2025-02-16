@@ -1,118 +1,274 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fabiana Freitas | Arte que transforma</title>
-<link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-<!-- Header -->
-<header class="header">
-    <nav class="nav-container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fabiana Freitas | Arte que transforma</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
         <div class="logo">
-            <a href="/">
-                <img src="/styles/images/logo-palha.png" alt="Fabiana Freitas" class="logo-image logo-default">
-                <img src="/styles/images/logo-oliva.png" alt="Fabiana Freitas" class="logo-image logo-scroll">
-            </a>
+          <a href="/">
+            <img
+              src="/styles/images/logo-palha.png"
+              alt="Fabiana Freitas"
+              class="logo-image logo-default"
+            />
+            <img
+              src="/styles/images/logo-oliva.png"
+              alt="Fabiana Freitas"
+              class="logo-image logo-scroll"
+            />
+          </a>
         </div>
         <div class="nav-links">
-            <a href="#about" class="nav-link">Sobre</a>
-            <a href="#contact" class="nav-link">Contato</a>
+          <a href="#about" class="nav-link">Sobre</a>
+          <a href="#contact" class="nav-link">Contato</a>
         </div>
-    </nav>
+      </nav>
     </header>
 
-<!-- Hero Section -->
-<section class="hero-section section-with-pattern" id="hero">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Arte que transforma</h1>
-            <p class="hero-subtitle">Subtitle here</p>
-            <a href="#contact" class="cta-button">CTA here</a>
-        </div>
-    </div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <!-- Video Background -->
+      <div class="video-background" preload="metadata">
+        <video autoplay muted loop playsinline>
+          <source src="/styles/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay"></div>
+      </div>
 
-<!-- About/Purpose Section -->
-<section class="about-section section-with-pattern" id="about">
-    <div class="container">
-        <h2>Sobre</h2>
-        <div class="about-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-            <p>Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi.</p>
-            <p>Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non.</p>
+      <!-- Content -->
+      <div class="hero-stripe">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <h1>Olá, seja bem-vindo!</h1>
+              <p class="hero-subtitle">
+                Meu nome é Fabiana Freitas, e aqui você poderá encontrar a
+                história do meu ateliê, saber um pouco mais sobre mim e ver
+                todos os nossos produtos e cursos disponíveis para venda. Não
+                hesite em entrar em contato caso tenha qualquer dúvida!
+              </p>
+              <div class="cta-group">
+                <a
+                  href="https://wa.me/YOUR_NUMBER"
+                  class="cta-button cta-primary"
+                >
+                  Veja todos os meus produtos no whatsapp
+                </a>
+                <a href="#about" class="cta-button cta-secondary">
+                  Minha história
+                </a>
+                <a href="#gallery" class="cta-button cta-secondary">
+                  Meu ateliê e trabalhos
+                </a>
+                <a href="#gallery" class="cta-button cta-secondary">
+                  as minhas redes sociais
+                </a>
+                <p class="cta-text">
+                  Respondo em até 24 horas, exceto aos fins de semana e
+                  feriados.
+                </p>
+              </div>
+            </div>
+            <div class="hero-image">
+              <img src="/styles/images/fabiana.png" alt="Fabiana Freitas" />
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
     </section>
-    
+
+    <!-- About/Purpose Section -->
+    <section class="about-section section-with-pattern" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="/styles/images/about.png" alt="Pintura em madeira" />
+          </div>
+          <div class="about-content">
+            <h2>Minha História</h2>
+            <div class="about-text">
+              <p class="about-highlight">
+                Minha jornada na arte começou em 2000, quando me apaixonei por
+                um simples coelhinho de páscoa pintado em madeira. O que começou
+                como um hobby se transformou em profissão - da aluna dedicada à
+                professora, até realizar o sonho de abrir meu próprio ateliê.
+              </p>
+              <p class="about-highlight">
+                Hoje, compartilho minha arte através de exposições, TV e redes
+                sociais. Além de criar peças exclusivas sob encomenda, divido
+                meu conhecimento através de cursos no YouTube, levando a magia
+                da pintura em madeira para cada vez mais pessoas.
+              </p>
+            </div>
+            <a href="#contact" class="cta-button cta-secondary"
+              >Conheça meu trabalho</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Featured Works Section -->
     <section class="gallery-section" id="gallery">
-    <div class="container">
-        <h2>Trabalhos</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="placeholder.jpg" alt="Trabalho 1">
-                <h3>Projeto Especial</h3>
-                <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+      <div class="container">
+        <h2>Meu ateliê e trabalhos</h2>
+        <p class="gallery-subtitle">
+          Localizado em São José dos Campos - SP desde 2008, meu ateliê é um
+          espaço acolhedor onde a arte ganha vida. Aqui, além de ministrar aulas
+          presenciais, crio peças únicas que expressam minha paixão pela pintura
+          em madeira. Convido você a conhecer algumas de minhas obras e a
+          descobrir onde nos encontrar.
+        </p>
+
+        <div class="swiper gallery-swiper">
+          <div class="swiper-wrapper">
+            <!-- Add as many slides as you need -->
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="/styles/images/atelie0.png" alt="Ateliê 1" />
+                <div class="gallery-item-caption">
+                  <h3>O ateliê!</h3>
+                  <p>Onde as ideias ganham vida</p>
+                </div>
+              </div>
             </div>
-            <div class="gallery-item">
-                <img src="placeholder.jpg" alt="Trabalho 2">
-                <h3>Arte Decorativa</h3>
-                <p>Vestibulum commodo volutpat a, convallis ac, laoreet enim.</p>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="/styles/images/atelie1.png" alt="Ateliê 1" />
+                <div class="gallery-item-caption">
+                  <h3>Espaço Criativo</h3>
+                  <p>Onde as ideias ganham vida</p>
+                </div>
+              </div>
             </div>
-            <div class="gallery-item">
-                <img src="placeholder.jpg" alt="Trabalho 3">
-                <h3>Peça Única</h3>
-                <p>Integer aliquam purus. Quisque lorem tortor fringilla sed.</p>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="/styles/images/atelie2.png" alt="Ateliê 2" />
+                <div class="gallery-item-caption">
+                  <h3>Área de Trabalho</h3>
+                  <p>Cada detalhe é pensado com carinho</p>
+                </div>
+              </div>
             </div>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="/styles/images/atelie3.png" alt="Ateliê 2" />
+                <div class="gallery-item-caption">
+                  <h3>Área de Trabalho</h3>
+                  <p>Cada detalhe é pensado com carinho</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="/styles/images/atelie4.png" alt="Ateliê 2" />
+                <div class="gallery-item-caption">
+                  <h3>Área de Trabalho</h3>
+                  <p>Cada detalhe é pensado com carinho</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="/styles/images/atelie5.png" alt="Ateliê 2" />
+                <div class="gallery-item-caption">
+                  <h3>Área de Trabalho</h3>
+                  <p>Cada detalhe é pensado com carinho</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
-    </div>
-    </section>
-    
-    <!-- Community Impact Section -->
-    <section class="community-section" id="community">
-    <div class="container">
-        <h2>Nossa Comunidade</h2>
-        <div class="testimonials">
-            <div class="testimonial">
-                <p>"Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."</p>
-                <cite>- Maria Silva</cite>
-            </div>
-            <div class="testimonial">
-                <p>"Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes."</p>
-                <cite>- Ana Santos</cite>
-            </div>
-            <div class="testimonial">
-                <p>"Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus."</p>
-                <cite>- Clara Oliveira</cite>
-            </div>
+        <!-- Map integrated in gallery section -->
+        <div class="gallery-location">
+          <h3>Onde me encontrar</h3>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.0379334566824!2d-45.89077482298307!3d-23.2417066499298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4bdbc0beba21%3A0x75f6314f52e21425!2sAteli%C3%AA%20Fabiana%20Freitas!5e0!3m2!1sen!2spt!4v1739740258759!5m2!1sen!2spt"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
         </div>
-    </div>
-    </section>
-    
-    <!-- Call to Action Section -->
-    <section class="cta-section" id="contact">
-    <div class="container">
-        <h2>Entre em Contato</h2>
-        <div class="contact-content">
-            <p>Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor.</p>
-            <div class="contact-buttons">
-                <a href="#" class="cta-button">WhatsApp</a>
-                <a href="#" class="cta-button secondary">Instagram</a>
-            </div>
-        </div>
-    </div>
+      </div>
     </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <!-- Footer content here -->
+    <!-- Community Impact Section -->
+    <section class="community-section" id="community">
+      <div class="container">
+        <h2>Nossa Comunidade</h2>
+        <div class="testimonials">
+          <div class="testimonial">
+            <p>
+              "Maecenas sed diam eget risus varius blandit sit amet non magna.
+              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+              auctor."
+            </p>
+            <cite>- Maria Silva</cite>
+          </div>
+          <div class="testimonial">
+            <p>
+              "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis
+              natoque penatibus et magnis dis parturient montes."
+            </p>
+            <cite>- Ana Santos</cite>
+          </div>
+          <div class="testimonial">
+            <p>
+              "Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+              eget lacinia odio sem nec elit. Donec ullamcorper nulla non
+              metus."
+            </p>
+            <cite>- Clara Oliveira</cite>
+          </div>
         </div>
-    </div>
-</footer>
-<script src="script.js"></script>
-</body>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <h2>Entre em Contato</h2>
+        <div class="contact-content">
+          <p>
+            Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus
+            fermentum in, dolor.
+          </p>
+          <div class="contact-buttons">
+            <a href="#" class="cta-button">WhatsApp</a>
+            <a href="#" class="cta-button secondary">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Footer content here -->
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
