@@ -66,7 +66,6 @@ root/
 ### Typography
 
 The site uses three custom fonts:
-
 - DollyPro: Headlines and feature text
 - FilmotypeLaCrosse: Decorative elements
 - Runda: Body text and navigation
@@ -74,7 +73,6 @@ The site uses three custom fonts:
 ## Getting Started
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/yourusername/fabiana-freitas-landing
    ```
@@ -82,7 +80,6 @@ The site uses three custom fonts:
 2. Verify font files are in the correct directories under `styles/fonts/`
 
 3. Update the Google Maps API key in `index.html`:
-
    ```html
    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
    ```
@@ -107,13 +104,11 @@ The site uses three custom fonts:
 ### Making Changes
 
 1. Styling modifications:
-
    - Edit `styles/main.css`
    - Follow the existing CSS custom properties system
    - Maintain mobile-first approach
 
 2. JavaScript updates:
-
    - Modify `script.js`
    - Test all interactive features
    - Ensure smooth animations
