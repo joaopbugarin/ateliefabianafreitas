@@ -23,7 +23,6 @@ A modern, responsive landing page showcasing Fabiana Freitas' art studio, specia
 - JavaScript
 - Swiper.js
 - Font Awesome
-- Google Maps API
 
 ## Project Structure
 
@@ -81,13 +80,8 @@ The site uses three custom fonts:
 
 2. Verify font files are in the correct directories under `styles/fonts/`
 
-3. Update the Google Maps API key in `index.html`:
 
-   ```html
-   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-   ```
-
-4. Deploy to your web server of choice
+3. Deploy to your web server of choice
 
 ## Browser Support
 
